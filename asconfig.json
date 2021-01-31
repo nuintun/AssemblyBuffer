@@ -2,7 +2,6 @@
   "targets": {
     "release": {
       "shrinkLevel": 2,
-      "runtime": "stub",
       "converge": false,
       "noAssert": false,
       "optimizeLevel": 3,

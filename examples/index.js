@@ -13,10 +13,10 @@ const view = document.getElementById('view');
 function onStart() {
   onStop();
 
-  Buffer.initialize().then(({ __getUint8Array, __newString, Buffer }) => {
+  Buffer.initialize().then(({ Buffer, __getUint8Array, __newString }) => {
     const buffer = new Buffer();
 
-    buffer.write(__newString(`${++index}: A buffer tool using WebAssembly.`), __newString('utf8'));
+    buffer.write(__newString(`${++index}: A buffer tool using WebAssembly.`));
 
     view.innerHTML = hex(__getUint8Array(buffer.bytes));
 
