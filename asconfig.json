@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "release": {
+      "shrinkLevel": 2,
+      "runtime": "stub",
+      "converge": false,
+      "noAssert": false,
+      "optimizeLevel": 3,
+      "exportRuntime": true,
+      "tsdFile": "wasm/Buffer.d.ts",
+      "binaryFile": "wasm/Buffer.wasm"
+    }
+  }
+}

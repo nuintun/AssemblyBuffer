@@ -1,0 +1,22 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "pretty": true,
+    "newLine": "LF",
+    "target": "ESNext",
+    "module": "ESNext",
+    "alwaysStrict": true,
+    "importHelpers": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "moduleResolution": "Node",
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
