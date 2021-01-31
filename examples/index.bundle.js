@@ -505,7 +505,7 @@
   }
   let exports$1;
   var index = {
-      async initialize() {
+      async init() {
           if (exports$1)
               return exports$1;
           return (exports$1 = await (await instantiate(fetchWasm())).exports);
@@ -524,7 +524,7 @@
   function onStart() {
     onStop();
 
-    index.initialize().then(({ Buffer, __getUint8Array, __newString }) => {
+    index.init().then(({ Buffer, __getUint8Array, __newString }) => {
       const buffer = new Buffer();
 
       buffer.write(__newString(`${++index$1}: A buffer tool using WebAssembly.`));

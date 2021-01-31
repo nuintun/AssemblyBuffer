@@ -21,7 +21,7 @@ function fetchWasm(): Blob | ArrayBuffer {
 let exports: ASUtil & typeof ASModule;
 
 export default {
-  async initialize(): Promise<typeof exports> {
+  async init(): Promise<typeof exports> {
     if (exports) return exports;
 
     return (exports = await (await instantiate<typeof ASModule>(fetchWasm())).exports);

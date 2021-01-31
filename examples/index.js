@@ -13,7 +13,7 @@ const view = document.getElementById('view');
 function onStart() {
   onStop();
 
-  Buffer.initialize().then(({ Buffer, __getUint8Array, __newString }) => {
+  Buffer.init().then(({ Buffer, __getUint8Array, __newString }) => {
     const buffer = new Buffer();
 
     buffer.write(__newString(`${++index}: A buffer tool using WebAssembly.`));
