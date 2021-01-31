@@ -7,12 +7,10 @@
 const hex = require('./hex');
 const Buffer = require('../es5');
 
-Buffer.initialize().then(({ __getUint8Array, __newArray, __newString, Buffer, UINT8_ARRAY_ID }) => {
+Buffer.initialize().then(({ __getUint8Array, __newString, Buffer }) => {
   const buffer = new Buffer();
 
-  buffer.writeBytes(__newArray(UINT8_ARRAY_ID, new Uint8Array([84, 121, 112, 101, 69, 114, 114, 111, 114, 58])));
-
-  buffer.write(__newString(`TypeError: Cannot read property 'toString' of undefined，你哦`), __newString('utf-8'));
+  buffer.write(__newString(`A buffer tool using WebAssembly.`));
 
   hex(__getUint8Array(buffer.bytes));
 });

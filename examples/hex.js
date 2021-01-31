@@ -2,6 +2,8 @@
  * @module hex
  */
 
+'use strict';
+
 function zero(num, max) {
   return num.toString(16).toUpperCase().padStart(max, '0');
 }

@@ -5,16 +5,28 @@
 import hex from './hex';
 import Buffer from '../esnext';
 
+let timer;
+let index = 0;
+
 const view = document.getElementById('view');
 
-function onClick() {
-  Buffer.initialize().then(({ __getUint8Array, __newArray, __newString, Buffer, UINT8_ARRAY_ID }) => {
+function onStart() {
+  onStop();
+
+  Buffer.initialize().then(({ __getUint8Array, __newString, Buffer }) => {
     const buffer = new Buffer();
 
-    buffer.write(__newString(`A buffer tool using WebAssembly.`), __newString('utf8'));
+    buffer.write(__newString(`${++index}: A buffer tool using WebAssembly.`), __newString('utf8'));
 
-    view.append(`${hex(__getUint8Array(buffer.bytes))}\r\n`);
+    view.innerHTML = hex(__getUint8Array(buffer.bytes));
+
+    timer = setTimeout(onStart, 100);
   });
 }
 
-document.getElementById('button').addEventListener('click', onClick, false);
+function onStop() {
+  clearTimeout(timer);
+}
+
+document.getElementById('start').addEventListener('click', onStart, false);
+document.getElementById('stop').addEventListener('click', onStop, false);
