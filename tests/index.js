@@ -551,5 +551,5 @@ Buffer$1.init().then(({ Buffer, __getUint8Array, __newString }) => {
     console.log(buffer.readUint64());
     console.log(buffer.readFloat32());
     console.log(buffer.readFloat64());
-    process.stdout.write(hex(__getUint8Array(buffer.bytes)));
+    process.stdout.write(`\r\n${hex(__getUint8Array(buffer.bytes))}`);
 });
