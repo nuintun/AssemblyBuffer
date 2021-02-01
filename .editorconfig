@@ -36,6 +36,7 @@ indent_style = tab
 indent_style = tab
 
 [*.md]
+insert_final_newline = true
 trim_trailing_whitespace = false
 
 [*.key]
