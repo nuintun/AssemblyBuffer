@@ -5,6 +5,7 @@
       "converge": false,
       "noAssert": false,
       "optimizeLevel": 3,
+      "runtime": "minimal",
       "exportRuntime": true,
       "tsdFile": "wasm/Buffer.d.ts",
       "binaryFile": "wasm/Buffer.wasm"

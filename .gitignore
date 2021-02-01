@@ -110,6 +110,5 @@ dist
 *.wasm.map
 
 # Build
-es5/
-wasm/
-esnext/
+cjs/
+esm/

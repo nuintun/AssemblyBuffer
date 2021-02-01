@@ -23,7 +23,7 @@ function onStart() {
     // @ts-ignore
     view.innerHTML = hex(__getUint8Array(buffer.bytes));
 
-    timer = window.setTimeout(onStart, 100);
+    timer = window.setTimeout(onStart, 16);
   });
 }
 
