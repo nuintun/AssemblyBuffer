@@ -5,7 +5,22 @@
 import hex from './hex';
 import Buffer from '../src';
 
-Buffer.init().then(({ Buffer, __getUint8Array, __newString }) => {
+Buffer.init().then(({ Buffer, __getUint8Array, __getString, __newString }) => {
+  /**
+   * @function byteLength
+   * @description 获取字符串指定编码字节长度
+   * @param {string} input
+   * @param {string} [encoding]
+   * @returns {number}
+   */
+  function byteLength(input: string, encoding: string = 'UTF8'): number {
+    const buffer = new Buffer();
+
+    buffer.write(__newString(input), __newString(encoding));
+
+    return buffer.length;
+  }
+
   const buffer = new Buffer();
 
   buffer.writeInt8(0xaf);
@@ -34,6 +49,7 @@ Buffer.init().then(({ Buffer, __getUint8Array, __newString }) => {
   console.log(buffer.readUint64());
   console.log(buffer.readFloat32());
   console.log(buffer.readFloat64());
+  console.log(__getString(buffer.read(byteLength(`A buffer tool using WebAssembly.`))));
 
   process.stdout.write(`\r\n${hex(__getUint8Array(buffer.bytes))}`);
 });
