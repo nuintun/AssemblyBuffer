@@ -13,14 +13,11 @@ const view: HTMLElement = document.getElementById('view');
 function onStart() {
   onStop();
 
-  Buffer.init().then(({ Buffer, __getUint8Array, __newString }) => {
-    // @ts-ignore
-    const buffer: Buffer = new Buffer();
+  Buffer.init().then(({ Buffer, __newString, __getUint8Array }) => {
+    const buffer = new Buffer();
 
-    // @ts-ignore
     buffer.write(__newString(`${++index}: A buffer tool using WebAssembly.`));
 
-    // @ts-ignore
     view.innerHTML = hex(__getUint8Array(buffer.bytes));
 
     timer = window.setTimeout(onStart, 16);
