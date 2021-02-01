@@ -1,5 +1,5 @@
 {
-  "name": "@nuintun/buffer",
+  "name": "@nuintun/assembly-buffer",
   "version": "0.0.1",
   "description": "A buffer tool using WebAssembly.",
   "main": "index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nuintun/buffer.git"
+    "url": "git+https://github.com/nuintun/AssemblyBuffer.git"
   },
   "keywords": [
     "wasm",
@@ -29,9 +29,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nuintun/buffer/issues"
+    "url": "https://github.com/nuintun/AssemblyBuffer/issues"
   },
-  "homepage": "https://github.com/nuintun/buffer#readme",
+  "homepage": "https://github.com/nuintun/AssemblyBuffer#readme",
   "dependencies": {
     "tslib": "^2.1.0",
     "@assemblyscript/loader": "^0.18.2"
