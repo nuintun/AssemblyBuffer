@@ -51,7 +51,7 @@ export class Buffer {
    * @description 下一次调用读写方法时将在此位置开始读写
    */
   public set offset(value: i32) {
-    this._offset = <i32>Math.min(value, this._length);
+    this._offset = <i32>Math.max(0, Math.min(value, this._length));
   }
 
   /**
