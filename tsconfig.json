@@ -1,14 +1,19 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
     "pretty": true,
+    "target": "ES5",
     "newLine": "LF",
-    "target": "ESNext",
     "module": "ESNext",
     "alwaysStrict": true,
-    "importHelpers": true,
     "noImplicitAny": true,
+    "noEmitHelpers": true,
+    "importHelpers": false,
     "noUnusedLocals": true,
+    "removeComments": false,
+    "strictNullChecks": true,
     "moduleResolution": "Node",
+    "noUnusedParameters": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true
   },

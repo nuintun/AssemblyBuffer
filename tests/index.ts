@@ -31,7 +31,9 @@ Buffer.init().then(({ Buffer, __getUint8Array, __getString, __newString }) => {
   buffer.writeUint16(0xfcfa);
   buffer.writeInt32(0xfafbfcfd);
   buffer.writeUint32(0xfdfbfafc);
+  // @ts-ignore
   buffer.writeInt64(0xf0f1fafbfcfdfeffn);
+  // @ts-ignore
   buffer.writeUint64(0xfffefdfcfbfaf1f0n);
   buffer.writeFloat32(123456.654321);
   buffer.writeFloat64(987654321.123456789);
@@ -46,7 +48,9 @@ Buffer.init().then(({ Buffer, __getUint8Array, __getString, __newString }) => {
   console.log(0xfcfa, '->', buffer.readUint16());
   console.log(0xfafbfcfd, '->', buffer.readInt32());
   console.log(0xfdfbfafc, '->', buffer.readUint32());
+  // @ts-ignore
   console.log(0xf0f1fafbfcfdfeffn, '->', buffer.readInt64());
+  // @ts-ignore
   console.log(0xfffefdfcfbfaf1f0n, '->', buffer.readUint64());
   console.log(123456.654321, '->', buffer.readFloat32());
   console.log(987654321.123456789, '->', buffer.readFloat64());

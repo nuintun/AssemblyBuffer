@@ -8,7 +8,7 @@ import Buffer from '../src';
 let timer: number;
 let index: number = 0;
 
-const view: HTMLElement = document.getElementById('view');
+const view: HTMLElement = document.getElementById('view') as HTMLElement;
 
 function onStart() {
   onStop();
@@ -28,5 +28,5 @@ function onStop() {
   clearTimeout(timer);
 }
 
-document.getElementById('start').addEventListener('click', onStart, false);
-document.getElementById('stop').addEventListener('click', onStop, false);
+(document.getElementById('start') as HTMLElement).addEventListener('click', onStart, false);
+(document.getElementById('stop') as HTMLElement).addEventListener('click', onStop, false);
