@@ -5,7 +5,6 @@
       "converge": false,
       "noAssert": false,
       "optimizeLevel": 3,
-      "runtime": "minimal",
       "exportRuntime": true,
       "binaryFile": "wasm/Buffer.wasm"
     }
