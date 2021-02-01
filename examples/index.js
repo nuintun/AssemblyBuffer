@@ -546,7 +546,7 @@
   // }
 
   /**
-   * @module index
+   * @module examples
    */
   let timer;
   let index = 0;

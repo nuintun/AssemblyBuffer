@@ -112,3 +112,4 @@ dist
 # Build
 cjs/
 esm/
+wasm/

@@ -1,7 +1,7 @@
 /**
- * @module rollup.esnext
+ * @module rollup.esm
  */
 
-import configure from './configure';
+import rollup from './rollup.base';
 
-export default configure(true);
+export default rollup(true);

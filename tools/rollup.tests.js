@@ -1,5 +1,5 @@
 /**
- * @module rollup.examples
+ * @module rollup.tests
  */
 
 import clean from './clean';
@@ -19,18 +19,18 @@ const banner = `/**
  */
 `;
 
-clean('examples/index.js');
+clean('tests/index.js');
 
 export default {
-  input: 'examples/index.ts',
+  input: 'tests/index.ts',
   output: {
     banner,
-    format: 'umd',
+    format: 'cjs',
     name: 'Buffer',
     interop: false,
     esModule: false,
     amd: { id: 'buffer' },
-    file: 'examples/index.js'
+    file: 'tests/index.js'
   },
   onwarn(error, warn) {
     if (error.code !== 'CIRCULAR_DEPENDENCY') {

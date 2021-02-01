@@ -6,11 +6,14 @@
   "typings": "typings/index.d.ts",
   "scripts": {
     "test": "node tests/index.js",
+    "prepublishOnly": "npm run build",
     "build:esm": "rollup -c tools/rollup.esm.js",
     "build:cjs": "rollup -c tools/rollup.cjs.js",
+    "build:tests": "rollup -c tools/rollup.tests.js",
     "build:asc": "asc assembly/index.ts --target release",
     "build:examples": "rollup -c tools/rollup.examples.js",
-    "build": "npm run build:asc && npm run build:esm && npm run build:cjs && npm run build:examples"
+    "build:main": "npm run build:asc && npm run build:cjs && npm run build:esm",
+    "build": "npm run build:main && npm run build:tests && npm run build:examples"
   },
   "repository": {
     "type": "git",

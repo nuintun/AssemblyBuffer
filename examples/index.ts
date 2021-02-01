@@ -1,5 +1,5 @@
 /**
- * @module index
+ * @module examples
  */
 
 import hex from './hex';
