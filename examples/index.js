@@ -4,7 +4,7 @@
  * @version 0.0.1
  * @author nuintun
  * @description A buffer tool using WebAssembly.
- * @see https://github.com/nuintun/buffer#readme
+ * @see https://github.com/nuintun/AssemblyBuffer#readme
  */
 
 (function (factory) {
