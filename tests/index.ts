@@ -22,6 +22,7 @@ Buffer.init().then(({ Buffer, __getUint8Array, __getString, __newString }) => {
   }
 
   const buffer = new Buffer();
+  const desc: string = `A buffer tool using WebAssembly.`;
 
   buffer.writeInt8(0xaf);
   buffer.writeUint8(0xfa);
@@ -34,22 +35,22 @@ Buffer.init().then(({ Buffer, __getUint8Array, __getString, __newString }) => {
   buffer.writeUint64(0xfffefdfcfbfaf1f0n);
   buffer.writeFloat32(123456.654321);
   buffer.writeFloat64(987654321.123456789);
-  buffer.write(__newString(`A buffer tool using WebAssembly.`));
+  buffer.write(__newString(desc));
 
   buffer.offset = 0;
 
-  console.log(buffer.readInt8());
-  console.log(buffer.readUint8());
-  console.log(buffer.readBoolean());
-  console.log(buffer.readInt16());
-  console.log(buffer.readUint16());
-  console.log(buffer.readInt32());
-  console.log(buffer.readUint32());
-  console.log(buffer.readInt64());
-  console.log(buffer.readUint64());
-  console.log(buffer.readFloat32());
-  console.log(buffer.readFloat64());
-  console.log(__getString(buffer.read(byteLength(`A buffer tool using WebAssembly.`))));
+  console.log(0xaf, '->', buffer.readInt8());
+  console.log(0xfa, '->', buffer.readUint8());
+  console.log(0x01, '->', buffer.readBoolean());
+  console.log(0xfafc, '->', buffer.readInt16());
+  console.log(0xfcfa, '->', buffer.readUint16());
+  console.log(0xfafbfcfd, '->', buffer.readInt32());
+  console.log(0xfdfbfafc, '->', buffer.readUint32());
+  console.log(0xf0f1fafbfcfdfeffn, '->', buffer.readInt64());
+  console.log(0xfffefdfcfbfaf1f0n, '->', buffer.readUint64());
+  console.log(123456.654321, '->', buffer.readFloat32());
+  console.log(987654321.123456789, '->', buffer.readFloat64());
+  console.log(desc, '->', __getString(buffer.read(byteLength(desc))));
 
   process.stdout.write(`\r\n${hex(__getUint8Array(buffer.bytes))}`);
 });
