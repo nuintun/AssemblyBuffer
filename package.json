@@ -7,7 +7,7 @@
   "scripts": {
     "test": "node tests/index.js",
     "tsbuild:es5": "rollup -c tools/rollup.es5.js",
-    "examples": "rollup -c examples/rollup.config.js",
+    "examples": "rollup -c tools/rollup.examples.js",
     "asbuild": "asc assembly/index.ts --target release",
     "tsbuild:esnext": "rollup -c tools/rollup.esnext.js",
     "tsbuild": "npm run tsbuild:es5 && npm run tsbuild:esnext",
