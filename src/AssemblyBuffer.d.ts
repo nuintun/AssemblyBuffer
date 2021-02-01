@@ -4,7 +4,7 @@ declare namespace AssemblyBuffer {
     static wrap(ptr: number): Buffer;
     constructor(length?: number, pageSize?: number);
     protected grow(length: number): void;
-    protected seek(offset: number): void;
+    protected stepOffset(offset: number): void;
     public readonly buffer: number;
     public readonly bytes: number;
     public offset: number;
