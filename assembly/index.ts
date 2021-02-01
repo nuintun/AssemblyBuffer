@@ -158,7 +158,7 @@ export class Buffer {
   /**
    * @protected
    * @method stepOffset
-   * @description 步进读写指针位置
+   * @description 偏移读写指针
    * @param {i32} offset
    */
   protected stepOffset(offset: i32): void {
