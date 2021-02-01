@@ -309,8 +309,8 @@ export class Buffer {
   /**
    * @method writeBytes
    * @description 在缓冲区中写入 Uint8Array 对象
-   * @param {i32} [begin] 开始索引
-   * @param {i32} [end] 结束索引
+   * @param {i32} [begin] Uint8Array 对象开始索引
+   * @param {i32} [end] Uint8Array 对象结束索引
    */
   public writeBytes(bytes: Uint8Array, begin: i32 = 0, end: i32 = bytes.length): void {
     const length: i32 = utils.calcSubLength(bytes.length, begin, end);
@@ -473,9 +473,9 @@ export class Buffer {
 
   /**
    * @method writeBytes
-   * @description 在缓冲区中写入 Uint8Array 对象
-   * @param {i32} [begin] 开始索引
-   * @param {i32} [end] 结束索引
+   * @description 从缓冲区中读取指定长度的 Uint8Array 对象
+   * @param {number} length 读取的字节长度
+   * @returns {Uint8Array}
    */
   public readBytes(length: i32): Uint8Array {
     if (length >= 0) {
