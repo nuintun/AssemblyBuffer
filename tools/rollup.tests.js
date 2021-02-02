@@ -2,12 +2,11 @@
  * @module rollup.tests
  */
 
-import clean from './clean';
 import pkg from '../package.json';
 import wasm from './plugins/wasm';
 import treeShake from './plugins/tree-shake';
 import resolve from '@rollup/plugin-node-resolve';
-import typescript from 'rollup-plugin-typescript2';
+import typescript from '@rollup/plugin-typescript';
 
 const banner = `/**
  * @module Buffer
@@ -18,8 +17,6 @@ const banner = `/**
  * @see ${pkg.homepage}
  */
 `;
-
-clean('tests/index.js');
 
 export default {
   input: 'tests/index.ts',

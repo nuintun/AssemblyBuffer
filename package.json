@@ -7,14 +7,16 @@
   "typings": "typings/index.d.ts",
   "scripts": {
     "test": "node tests/index.js",
+    "clean": "node tools/clean.js",
     "prepublishOnly": "npm run build",
-    "build:esm": "rollup -c tools/rollup.esm.js",
+    "build:typings": "tsc -p tsconfig.d.json",
     "build:cjs": "rollup -c tools/rollup.cjs.js",
+    "build:esm": "rollup -c tools/rollup.esm.js",
     "build:tests": "rollup -c tools/rollup.tests.js",
     "build:asc": "asc assembly/index.ts --target release",
     "build:examples": "rollup -c tools/rollup.examples.js",
-    "build:main": "npm run build:asc && npm run build:cjs && npm run build:esm",
-    "build": "npm run build:main && npm run build:tests && npm run build:examples"
+    "build": "npm run clean && npm run build:main && npm run build:tests && npm run build:examples",
+    "build:main": "npm run build:asc && npm run build:cjs && npm run build:esm && npm run build:typings"
   },
   "repository": {
     "type": "git",
@@ -47,7 +49,7 @@
     "@types/node": "^14.14.22",
     "assemblyscript": "^0.18.3",
     "@rollup/pluginutils": "^4.1.0",
-    "rollup-plugin-typescript2": "^0.29.0",
+    "@rollup/plugin-typescript": "^8.1.1",
     "@rollup/plugin-node-resolve": "^11.1.1"
   }
 }

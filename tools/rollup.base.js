@@ -2,17 +2,11 @@
  * @module rollup.base
  */
 
-import clean from './clean';
 import wasm from './plugins/wasm';
 import treeShake from './plugins/tree-shake';
-import typescript from 'rollup-plugin-typescript2';
+import typescript from '@rollup/plugin-typescript';
 
 export default function rollup(esnext) {
-  clean(esnext ? ['esm', 'typings'] : ['cjs']);
-
-  const tsconfigOverride = { compilerOptions: { declaration: true, declarationDir: 'typings' } };
-  const tsconfig = esnext ? { tsconfigOverride, useTsconfigDeclarationDir: true } : {};
-
   return {
     input: 'src/index.ts',
     output: {
@@ -22,12 +16,12 @@ export default function rollup(esnext) {
       dir: esnext ? 'esm' : 'cjs',
       format: esnext ? 'esm' : 'cjs'
     },
+    plugins: [wasm(), typescript(), treeShake()],
+    external: ['tslib', '@assemblyscript/loader'],
     onwarn(error, warn) {
       if (error.code !== 'CIRCULAR_DEPENDENCY') {
         warn(error);
       }
-    },
-    external: ['tslib', '@assemblyscript/loader'],
-    plugins: [wasm(), typescript(tsconfig), treeShake()]
+    }
   };
 }

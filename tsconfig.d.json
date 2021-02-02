@@ -1,17 +1,16 @@
 {
   "include": [
-    "src/**/*",
-    "tests/**/*",
-    "examples/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules"
   ],
   "compilerOptions": {
     "pretty": true,
-    "target": "ES5",
     "newLine": "LF",
+    "target": "ESNext",
     "module": "ESNext",
+    "declaration": true,
     "alwaysStrict": true,
     "noImplicitAny": true,
     "noEmitHelpers": true,
@@ -21,6 +20,8 @@
     "strictNullChecks": true,
     "moduleResolution": "Node",
     "noUnusedParameters": true,
+    "declarationDir": "typings",
+    "emitDeclarationOnly": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true
   }
