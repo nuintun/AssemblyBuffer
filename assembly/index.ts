@@ -67,6 +67,25 @@ export class Buffer {
   /**
    * @public
    * @property {i32} length
+   * @description 设置 Buffer 长度
+   * @description 如果将长度设置为小于当前长度的值，将会截断该字节数组
+   * @description 如果将长度设置为大于当前长度的值，则用零填充字节数组的右侧
+   */
+  public set length(value: i32) {
+    if (value > this._bytes.length) {
+      this.alloc(value - this._offset);
+    } else {
+      this._length = value;
+    }
+
+    if (this._offset > value) {
+      this._offset = value;
+    }
+  }
+
+  /**
+   * @public
+   * @property {i32} length
    * @description 获取 Buffer 长度
    * @returns {i32}
    */
