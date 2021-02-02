@@ -3,7 +3,7 @@
  */
 
 // 基础类型空间占用
-export const enum ByteLength {
+export const enum SizeOf {
   INT8 = 1,
   UINT8 = 1,
   INT16 = 2,
