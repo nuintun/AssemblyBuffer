@@ -5,7 +5,7 @@
 import hex from './hex';
 import Buffer from '../src';
 
-let timer: number;
+let raf: number;
 let index: number = 0;
 
 const view: HTMLElement = document.getElementById('view') as HTMLElement;
@@ -20,12 +20,12 @@ function onStart() {
 
     view.innerHTML = hex(__getUint8Array(buffer.bytes));
 
-    timer = window.setTimeout(onStart, 16);
+    raf = window.requestAnimationFrame(onStart);
   });
 }
 
 function onStop() {
-  clearTimeout(timer);
+  window.cancelAnimationFrame(raf);
 }
 
 (document.getElementById('start') as HTMLElement).addEventListener('click', onStart, false);

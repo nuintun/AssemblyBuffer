@@ -309,11 +309,13 @@ export class Buffer {
    * @param {i32} [end] Uint8Array 对象结束索引
    */
   public writeBytes(bytes: Uint8Array, begin: i32 = 0, end: i32 = bytes.length): void {
-    const length: i32 = utils.calcSubLength(bytes.length, begin, end);
+    bytes = bytes.subarray(begin, end);
+
+    const length: i32 = bytes.length;
 
     if (length > 0) {
       this.alloc(length);
-      this._bytes.set(bytes.subarray(begin, end), this._offset);
+      this._bytes.set(bytes, this._offset);
       this.stepOffset(length);
     }
   }

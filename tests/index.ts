@@ -39,6 +39,8 @@ Buffer.init().then(({ Buffer, __getUint8Array, __getString, __newString }) => {
   buffer.writeFloat64(987654321.123456789);
   buffer.write(__newString(desc));
 
+  process.stdout.write(`\r\n${hex(__getUint8Array(buffer.bytes))}`);
+
   buffer.offset = 0;
 
   console.log(0xaf, '->', buffer.readInt8());
