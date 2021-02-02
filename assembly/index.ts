@@ -145,7 +145,7 @@ export class Buffer {
     if (length > 0) {
       length += this.offset;
 
-      if (length > this._dataView.byteLength) {
+      if (length > this._bytes.length) {
         const bytes: Uint8Array = new Uint8Array(utils.calcBestLength(length, this._pageSize));
 
         bytes.set(this._bytes);
