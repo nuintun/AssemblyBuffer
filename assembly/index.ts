@@ -169,7 +169,7 @@ export class Buffer {
    */
   protected assertRead(length: i32): void {
     if (this._offset + length > this._length) {
-      throw new RangeError(CONST.OFFSET_OVERFLOW);
+      throw new RangeError(CONST.READ_OVERFLOW);
     }
   }
 
@@ -506,7 +506,7 @@ export class Buffer {
       }
     }
 
-    throw new RangeError(CONST.OFFSET_OVERFLOW);
+    throw new RangeError(CONST.READ_OVERFLOW);
   }
 
   /**
