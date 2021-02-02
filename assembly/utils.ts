@@ -3,23 +3,6 @@
  */
 
 /**
- * @function calcBestLength
- * @description 计算适合的 ByteArray 长度
- * @param {i32} length 数据字节总大小
- * @param {u16} pageSize 缓冲区页大小
- * @returns {i32}
- */
-export function calcBestLength(length: i32, pageSize: u16): i32 {
-  if (length > <i32>pageSize) {
-    const pages: i32 = <i32>Math.ceil(length / pageSize);
-
-    return pages * pageSize;
-  } else {
-    return length;
-  }
-}
-
-/**
  * @function stringEncode
  * @description 用指定编码编码字符串
  * @param {string} value 需要编码的字符串
@@ -59,6 +42,23 @@ export function stringDecode(buffer: ArrayBuffer, encoding: string): string {
   }
 
   throw new TypeError('Unsupported encoding ' + encoding);
+}
+
+/**
+ * @function calcBufferLength
+ * @description 计算适合的 Buffer 长度
+ * @param {i32} length 数据字节总大小
+ * @param {u16} pageSize 缓冲区页大小
+ * @returns {i32}
+ */
+export function calcBufferLength(length: i32, pageSize: u16): i32 {
+  if (length > <i32>pageSize) {
+    const pages: i32 = <i32>Math.ceil(length / pageSize);
+
+    return pages * pageSize;
+  } else {
+    return length;
+  }
 }
 
 /**

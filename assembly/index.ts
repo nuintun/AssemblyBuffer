@@ -39,7 +39,7 @@ export class Buffer {
    */
   constructor(length: i32 = 0, pageSize: u16 = 4096) {
     this._pageSize = pageSize;
-    this._initLength = utils.calcBestLength(length, pageSize);
+    this._initLength = utils.calcBufferLength(length, pageSize);
     this._bytes = new Uint8Array(this._initLength);
     this._dataView = new DataView(this._bytes.buffer);
   }
@@ -105,7 +105,7 @@ export class Buffer {
       length += this.offset;
 
       if (length > this._bytes.length) {
-        const bytes: Uint8Array = new Uint8Array(utils.calcBestLength(length, this._pageSize));
+        const bytes: Uint8Array = new Uint8Array(utils.calcBufferLength(length, this._pageSize));
 
         bytes.set(this._bytes);
 
@@ -127,18 +127,6 @@ export class Buffer {
    */
   protected stepOffset(offset: i32): void {
     this.offset = this._offset + offset;
-  }
-
-  /**
-   * @public
-   * @method clear
-   * @description 清除缓冲区数据并重置默认状态
-   */
-  public clear(): void {
-    this._offset = 0;
-    this._length = 0;
-    this._bytes = new Uint8Array(this._initLength);
-    this._dataView = new DataView(this._bytes.buffer);
   }
 
   /**
@@ -445,7 +433,7 @@ export class Buffer {
     if (length >= 0) {
       const end: i32 = this._offset + length;
 
-      if (end <= this._length + 1) {
+      if (end <= this._length) {
         const bytes: Uint8Array = this._bytes.slice(this._offset, end);
 
         this.stepOffset(length);
@@ -489,5 +477,17 @@ export class Buffer {
 
     // 返回二进制编码
     return binary;
+  }
+
+  /**
+   * @public
+   * @method clear
+   * @description 清除缓冲区数据并重置默认状态
+   */
+  public clear(): void {
+    this._offset = 0;
+    this._length = 0;
+    this._bytes = new Uint8Array(this._initLength);
+    this._dataView = new DataView(this._bytes.buffer);
   }
 }

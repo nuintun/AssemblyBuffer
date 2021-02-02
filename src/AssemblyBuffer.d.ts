@@ -3,14 +3,12 @@ declare namespace AssemblyBuffer {
   export class Buffer {
     static wrap(ptr: number): Buffer;
     constructor(length?: number, pageSize?: number);
-    protected grow(length: number): void;
-    protected stepOffset(offset: number): void;
+    public offset: number;
     public readonly buffer: number;
     public readonly bytes: number;
-    public offset: number;
-    public length: number;
-    public readAvailable: number;
-    public bytesAvailable: number;
+    public readonly length: number;
+    protected alloc(length: number): void;
+    protected stepOffset(offset: number): void;
     public writeInt8(value: number): void;
     public writeUint8(value: number): void;
     public writeBoolean(value: 0 | 1): void;
