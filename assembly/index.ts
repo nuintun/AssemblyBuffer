@@ -51,7 +51,15 @@ export class Buffer {
    * @description 下一次调用读写方法时将在此位置开始读写
    */
   public set offset(value: i32) {
-    this._offset = <i32>Math.max(0, Math.min(value, this._length));
+    if (value < 0) {
+      throw new RangeError('Invalid buffer offset');
+    }
+
+    if (value > this._length) {
+      throw new RangeError('Offset out of range');
+    }
+
+    this._offset = value;
   }
 
   /**
@@ -72,6 +80,10 @@ export class Buffer {
    * @description 如果将长度设置为大于当前长度的值，则用零填充字节数组的右侧
    */
   public set length(value: i32) {
+    if (value < 0) {
+      throw new RangeError('Invalid buffer length');
+    }
+
     if (value > this._bytes.length) {
       this.alloc(value - this._offset);
     } else {
