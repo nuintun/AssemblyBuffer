@@ -83,5 +83,5 @@ export default function hex(buffer: Uint8Array): string {
     hex += `\n`;
   }
 
-  return hex;
+  return hex.trim();
 }
