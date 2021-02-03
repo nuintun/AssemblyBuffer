@@ -1,6 +1,7 @@
 {
   "targets": {
     "release": {
+      "optimize": true,
       "shrinkLevel": 2,
       "converge": false,
       "noAssert": false,
