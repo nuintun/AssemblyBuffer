@@ -39,7 +39,7 @@ Buffer.init().then(({ Buffer, __getUint8Array, __getString, __newString }) => {
   buffer.writeFloat64(987654321.123456789);
   buffer.write(__newString(desc));
 
-  process.stdout.write(`\r\n${hex(__getUint8Array(buffer.bytes))}`);
+  console.log(hex(__getUint8Array(buffer.bytes)));
 
   buffer.offset = 0;
 
@@ -58,5 +58,5 @@ Buffer.init().then(({ Buffer, __getUint8Array, __getString, __newString }) => {
   console.log(987654321.123456789, '->', buffer.readFloat64());
   console.log(desc, '->', __getString(buffer.read(byteLength(desc))));
 
-  process.stdout.write(`\r\n${hex(__getUint8Array(buffer.bytes))}`);
+  console.log(hex(__getUint8Array(buffer.bytes)));
 });
