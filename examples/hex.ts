@@ -2,12 +2,41 @@
  * @module hex
  */
 
-'use strict';
+/**
+ * @type {string[]}
+ * @description 已获得的 hex 映射表
+ */
+const mapping: string[] = [];
 
-function zero(num: number, max: number): string {
-  return num.toString(16).toUpperCase().padStart(max, '0');
+// 字母映射表
+const alphabet: string = '0123456789ABCDEF';
+
+// 生成映射表
+for (let i: number = 0; i < 16; ++i) {
+  const i16: number = i * 16;
+
+  for (let j: number = 0; j < 16; ++j) {
+    mapping[i16 + j] = alphabet[i] + alphabet[j];
+  }
 }
 
+/**
+ * @function zero
+ * @description 数字左边补零操作
+ * @param {number} value
+ * @param {number} max
+ * @returns {string}
+ */
+function zero(value: number, max: number): string {
+  return (value > 0xff ? value.toString(16) : mapping[value]).padStart(max, '0');
+}
+
+/**
+ * @function hex
+ * @function Hex 查看器
+ * @param {Uint8Array} buffer
+ * @returns {string}
+ */
 export default function hex(buffer: Uint8Array): string {
   const { length }: Uint8Array = buffer;
   const last: number = length % 16 || 16;

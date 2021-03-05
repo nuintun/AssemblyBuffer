@@ -23,13 +23,12 @@ for (let i: number = 0; i < 16; ++i) {
 /**
  * @function zero
  * @description 数字左边补零操作
- * @param {number} num
+ * @param {number} value
  * @param {number} max
  * @returns {string}
  */
-
-function zero(num: number, max: number): string {
-  return num.toString(16).toUpperCase().padStart(max, '0');
+function zero(value: number, max: number): string {
+  return (value > 0xff ? value.toString(16) : mapping[value]).padStart(max, '0');
 }
 
 /**

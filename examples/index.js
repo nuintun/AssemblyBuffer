@@ -15,9 +15,36 @@
     /**
      * @module hex
      */
-    function zero(num, max) {
-        return num.toString(16).toUpperCase().padStart(max, '0');
+    /**
+     * @type {string[]}
+     * @description 已获得的 hex 映射表
+     */
+    var mapping = [];
+    // 字母映射表
+    var alphabet = '0123456789ABCDEF';
+    // 生成映射表
+    for (var i = 0; i < 16; ++i) {
+        var i16 = i * 16;
+        for (var j = 0; j < 16; ++j) {
+            mapping[i16 + j] = alphabet[i] + alphabet[j];
+        }
     }
+    /**
+     * @function zero
+     * @description 数字左边补零操作
+     * @param {number} value
+     * @param {number} max
+     * @returns {string}
+     */
+    function zero(value, max) {
+        return (value > 0xff ? value.toString(16) : mapping[value]).padStart(max, '0');
+    }
+    /**
+     * @function hex
+     * @function Hex 查看器
+     * @param {Uint8Array} buffer
+     * @returns {string}
+     */
     function hex(buffer) {
         var length = buffer.length;
         var last = length % 16 || 16;
@@ -566,21 +593,25 @@
      */
     var raf;
     var index = 0;
+    var start = document.getElementById('start');
+    var stop = document.getElementById('stop');
     var view = document.getElementById('view');
     function onStart() {
         onStop();
         Buffer$1.init().then(function (_a) {
             var Buffer = _a.Buffer, __newString = _a.__newString, __getUint8Array = _a.__getUint8Array;
+            var timeStamp = window.performance.now();
             var buffer = new Buffer();
             buffer.write(__newString(++index + ": A buffer tool using WebAssembly."));
-            view.innerHTML = hex(__getUint8Array(buffer.bytes));
+            var performance = window.performance.now() - timeStamp;
+            view.value = hex(__getUint8Array(buffer.bytes)) + "\r\n\r\nperformance: " + performance + "ms";
             raf = window.requestAnimationFrame(onStart);
         });
     }
     function onStop() {
         window.cancelAnimationFrame(raf);
     }
-    document.getElementById('start').addEventListener('click', onStart, false);
-    document.getElementById('stop').addEventListener('click', onStop, false);
+    start.addEventListener('click', onStart, false);
+    stop.addEventListener('click', onStop, false);
 
 })));
