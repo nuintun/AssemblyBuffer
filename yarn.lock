@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@assemblyscript/loader@^0.18.24":
-  version "0.18.24"
-  resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.18.24.tgz#d8521c004ddc7dca2a6a9c0eb8e91b53335db600"
-  integrity sha512-SPzLeIn+BSBI7JkYsjinV98HO+kajM0EQKu2THthFTCuIZGa1TlmSpKX51OavDJYWOCcesDTjjDhcJdhAGSzQg==
+"@assemblyscript/loader@^0.18.27":
+  version "0.18.27"
+  resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.18.27.tgz#bbb01df82ea9154a8716e817336078c82b5fe41e"
+  integrity sha512-LAYgvvqsEabC4JMmoXaXRLz7cGaGDuz080xlDXslSqGft5e7+5eynWp/PIyLLxWKrKzhaBqHc07hsAYPVjvvtA==
 
 "@rollup/plugin-node-resolve@^11.2.1":
   version "11.2.1"
@@ -49,10 +49,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
-"@types/node@*", "@types/node@^14.14.37":
-  version "14.14.37"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
-  integrity sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
+"@types/node@*", "@types/node@^14.14.41":
+  version "14.14.41"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.41.tgz#d0b939d94c1d7bd53d04824af45f1139b8c45615"
+  integrity sha512-dueRKfaJL4RTtSa7bWeTK1M+VH+Gns73oCgzvYfHZywRCoPSd8EkXBL0mZ9unPTveBn+D9phZBaxuzpwjWkW0g==
 
 "@types/resolve@1.17.1":
   version "1.17.1"
@@ -61,12 +61,12 @@
   dependencies:
     "@types/node" "*"
 
-assemblyscript@^0.18.24:
-  version "0.18.24"
-  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.18.24.tgz#dea726771d512fb6efc70a9d53d73c2682f19146"
-  integrity sha512-V9i7TKgRW4x8jv6+4JimVJXdi9MoiJqCvDYfYgqMfjaquClp1vwcPQXpvKHTvY4PJl4S6cLN48QWtTRGhlB9cg==
+assemblyscript@^0.18.27:
+  version "0.18.27"
+  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.18.27.tgz#8819a1d61ad20b6684ce73383901c13333fc0d71"
+  integrity sha512-2lCqioV9UAhFCWulFr/1HtCrAhIjjZXXrCO2bzQfddkgqc0wh5j30lx4dXunVisH11Zr8Bx7Rwi9kSEE3hiqyg==
   dependencies:
-    binaryen "100.0.0"
+    binaryen "100.0.0-nightly.20210413"
     long "^4.0.0"
 
 balanced-match@^1.0.0:
@@ -74,10 +74,10 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-binaryen@100.0.0:
-  version "100.0.0"
-  resolved "https://registry.yarnpkg.com/binaryen/-/binaryen-100.0.0.tgz#8ed91955eff14eb4758d68d593869cbc1a9a0dff"
-  integrity sha512-nxOt8d8/VXAuSVEtAWUdKrqpqCy365QqD223EzzB1GzS5himiZAfM/R5lXx+M/5q8TB8cYp3tYxv5rTjNTJveQ==
+binaryen@100.0.0-nightly.20210413:
+  version "100.0.0-nightly.20210413"
+  resolved "https://registry.yarnpkg.com/binaryen/-/binaryen-100.0.0-nightly.20210413.tgz#b7f2a5bb1f76b2d6f9c67486ca218714b3766790"
+  integrity sha512-EeGLIxQmJS0xnYl+SH34mNBqVMoixKd9nsE7S7z+CtS9A4eoWn3Qjav+XElgunUgXIHAI5yLnYT2TUGnLX2f1w==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
