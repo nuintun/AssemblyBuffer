@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@assemblyscript/loader@^0.18.27":
-  version "0.18.27"
-  resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.18.27.tgz#bbb01df82ea9154a8716e817336078c82b5fe41e"
-  integrity sha512-LAYgvvqsEabC4JMmoXaXRLz7cGaGDuz080xlDXslSqGft5e7+5eynWp/PIyLLxWKrKzhaBqHc07hsAYPVjvvtA==
+"@assemblyscript/loader@^0.18.29":
+  version "0.18.29"
+  resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.18.29.tgz#42861e26e49aaab897588d8f54e950a3304204ef"
+  integrity sha512-XtjVY/oUb8Rk1D9Lu82gYgv7DqEgwXgOL7WxxF05oYi5QhPFv29BijK00b6MGiTTel11lnFra/GuUvTMQx3fzg==
 
 "@rollup/plugin-node-resolve@^11.2.1":
   version "11.2.1"
@@ -49,10 +49,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
-"@types/node@*", "@types/node@^14.14.41":
-  version "14.14.41"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.41.tgz#d0b939d94c1d7bd53d04824af45f1139b8c45615"
-  integrity sha512-dueRKfaJL4RTtSa7bWeTK1M+VH+Gns73oCgzvYfHZywRCoPSd8EkXBL0mZ9unPTveBn+D9phZBaxuzpwjWkW0g==
+"@types/node@*", "@types/node@^15.0.1":
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.1.tgz#ef34dea0881028d11398be5bf4e856743e3dc35a"
+  integrity sha512-TMkXt0Ck1y0KKsGr9gJtWGjttxlZnnvDtphxUOSd0bfaR6Q1jle+sPvrzNR1urqYTWMinoKvjKfXUGsumaO1PA==
 
 "@types/resolve@1.17.1":
   version "1.17.1"
@@ -61,10 +61,10 @@
   dependencies:
     "@types/node" "*"
 
-assemblyscript@^0.18.27:
-  version "0.18.27"
-  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.18.27.tgz#8819a1d61ad20b6684ce73383901c13333fc0d71"
-  integrity sha512-2lCqioV9UAhFCWulFr/1HtCrAhIjjZXXrCO2bzQfddkgqc0wh5j30lx4dXunVisH11Zr8Bx7Rwi9kSEE3hiqyg==
+assemblyscript@^0.18.29:
+  version "0.18.29"
+  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.18.29.tgz#b6adff3a5f4742da23f78fec46524a16c0e9bde1"
+  integrity sha512-fHj5LN0QrsuViF26UQPI5jPxh+o5vpWS1oj3Dv1tD2t4G9Av480t8qWE2ycZ7v4ZEBmC1Ha9QvT+sAUhI141Nw==
   dependencies:
     binaryen "100.0.0-nightly.20210413"
     long "^4.0.0"
@@ -160,9 +160,9 @@ inherits@2:
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
 is-core-module@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.2.0.tgz#97037ef3d52224d85163f5597b2b63d9afed981a"
-  integrity sha512-XRAfAdyyY5F5cOXn7hYQDqh2Xmii+DEfIcQGxK/uNwMHhIkPWO0g8msXcbzLe+MpGoR951MlqM/2iIlU4vKDdQ==
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.3.0.tgz#d341652e3408bca69c4671b79a0954a3d349f887"
+  integrity sha512-xSphU2KG9867tsYdLD4RWQ1VqdFl4HTO9Thf3I/3dLEfr0dbPTWKsuCKrgqMljg4nPE+Gq0VCnzT3gr0CyBmsw==
   dependencies:
     has "^1.0.3"
 
