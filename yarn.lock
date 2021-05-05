@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@assemblyscript/loader@^0.18.29":
-  version "0.18.29"
-  resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.18.29.tgz#42861e26e49aaab897588d8f54e950a3304204ef"
-  integrity sha512-XtjVY/oUb8Rk1D9Lu82gYgv7DqEgwXgOL7WxxF05oYi5QhPFv29BijK00b6MGiTTel11lnFra/GuUvTMQx3fzg==
+"@assemblyscript/loader@^0.18.31":
+  version "0.18.31"
+  resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.18.31.tgz#c95bb1765a428e6022a2558653a5e986cb322e7a"
+  integrity sha512-BrPyjojTj7ReaDUiDzfbm0Ei/2OoF2ZimcvxTGSQ7IrVKld/c/7w1DcFJjaLj1eBaartP2TBEzaf7iky+UiDYA==
 
-"@rollup/plugin-node-resolve@^11.2.1":
-  version "11.2.1"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-11.2.1.tgz#82aa59397a29cd4e13248b106e6a4a1880362a60"
-  integrity sha512-yc2n43jcqVyGE2sqV5/YCmocy9ArjVAP/BeXyTtADTBBX6V0e5UMqwO8CdQ0kzjb6zu5P1qMzsScCMRvE9OlVg==
+"@rollup/plugin-node-resolve@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-13.0.0.tgz#352f07e430ff377809ec8ec8a6fd636547162dc4"
+  integrity sha512-41X411HJ3oikIDivT5OKe9EZ6ud6DXudtfNrGbC4nniaxx2esiWjkLOzgnZsWq1IM8YIeL2rzRGLZLBjlhnZtQ==
   dependencies:
     "@rollup/pluginutils" "^3.1.0"
     "@types/resolve" "1.17.1"
@@ -49,10 +49,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
-"@types/node@*", "@types/node@^15.0.1":
-  version "15.0.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.1.tgz#ef34dea0881028d11398be5bf4e856743e3dc35a"
-  integrity sha512-TMkXt0Ck1y0KKsGr9gJtWGjttxlZnnvDtphxUOSd0bfaR6Q1jle+sPvrzNR1urqYTWMinoKvjKfXUGsumaO1PA==
+"@types/node@*", "@types/node@^15.0.2":
+  version "15.0.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.2.tgz#51e9c0920d1b45936ea04341aa3e2e58d339fb67"
+  integrity sha512-p68+a+KoxpoB47015IeYZYRrdqMUcpbK8re/zpFB8Ld46LHC1lPEbp3EXgkEhAYEcPvjJF6ZO+869SQ0aH1dcA==
 
 "@types/resolve@1.17.1":
   version "1.17.1"
@@ -61,10 +61,10 @@
   dependencies:
     "@types/node" "*"
 
-assemblyscript@^0.18.29:
-  version "0.18.29"
-  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.18.29.tgz#b6adff3a5f4742da23f78fec46524a16c0e9bde1"
-  integrity sha512-fHj5LN0QrsuViF26UQPI5jPxh+o5vpWS1oj3Dv1tD2t4G9Av480t8qWE2ycZ7v4ZEBmC1Ha9QvT+sAUhI141Nw==
+assemblyscript@^0.18.31:
+  version "0.18.31"
+  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.18.31.tgz#ceee70fb75c78bc009831c25680967f3c089c9cc"
+  integrity sha512-4MtKf1nnmY0eh+v4PKVnIjT8HPTRBqJqACW3kXQoDztyFBLHN1WxGSgZ9iPsLbm/6xKNYD0l6j9y03PoMv+Qog==
   dependencies:
     binaryen "100.0.0-nightly.20210413"
     long "^4.0.0"
@@ -227,10 +227,10 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rollup@^2.45.2:
-  version "2.45.2"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.45.2.tgz#8fb85917c9f35605720e92328f3ccbfba6f78b48"
-  integrity sha512-kRRU7wXzFHUzBIv0GfoFFIN3m9oteY4uAsKllIpQDId5cfnkWF2J130l+27dzDju0E6MScKiV0ZM5Bw8m4blYQ==
+rollup@^2.47.0:
+  version "2.47.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.47.0.tgz#9d958aeb2c0f6a383cacc0401dff02b6e252664d"
+  integrity sha512-rqBjgq9hQfW0vRmz+0S062ORRNJXvwRpzxhFXORvar/maZqY6za3rgQ/p1Glg+j1hnc1GtYyQCPiAei95uTElg==
   optionalDependencies:
     fsevents "~2.3.1"
 
