@@ -39,15 +39,15 @@
   "homepage": "https://github.com/nuintun/AssemblyBuffer#readme",
   "dependencies": {
     "tslib": "^2.2.0",
-    "@assemblyscript/loader": "^0.18.31"
+    "@assemblyscript/loader": "^0.19.2"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "rollup": "^2.47.0",
-    "typescript": "^4.2.4",
+    "rollup": "^2.51.1",
+    "typescript": "^4.3.2",
     "magic-string": "^0.25.7",
-    "@types/node": "^15.0.2",
-    "assemblyscript": "^0.18.31",
+    "@types/node": "^15.12.2",
+    "assemblyscript": "^0.19.2",
     "@rollup/pluginutils": "^4.1.0",
     "@rollup/plugin-typescript": "^8.2.1",
     "@rollup/plugin-node-resolve": "^13.0.0"
