@@ -7,6 +7,7 @@
       "noAssert": false,
       "optimizeLevel": 3,
       "exportRuntime": true,
+      "tsdFile": "wasm/Buffer.d.ts",
       "binaryFile": "wasm/Buffer.wasm"
     }
   }

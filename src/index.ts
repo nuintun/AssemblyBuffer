@@ -1,8 +1,12 @@
 import wasm from '../wasm/Buffer.wasm';
-import AssemblyBuffer from './AssemblyBuffer.d';
 import { ASUtil, instantiate } from '@assemblyscript/loader';
+import type { Buffer as InternalBuffer } from '../wasm/Buffer';
 
-export type AssemblyBuffer = typeof AssemblyBuffer;
+type InternalExport = {
+  Buffer: typeof InternalBuffer;
+};
+
+type Export = ASUtil & InternalExport;
 
 function readAssembly(): Blob | ArrayBuffer {
   if (globalThis.atob) {
@@ -20,12 +24,14 @@ function readAssembly(): Blob | ArrayBuffer {
   }
 }
 
-let buffer: ASUtil & AssemblyBuffer;
+let buffer: Export;
+
+export { InternalBuffer as Buffer };
 
 export default {
   async init(): Promise<typeof buffer> {
     if (buffer) return buffer;
 
-    return (buffer = (await instantiate<AssemblyBuffer>(readAssembly())).exports);
+    return (buffer = (await instantiate<InternalExport>(readAssembly())).exports);
   }
 };
