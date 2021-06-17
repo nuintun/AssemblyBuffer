@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@assemblyscript/loader@^0.19.2":
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.19.2.tgz#dd4283eaed26f73369e515a4fc9600c49d275add"
-  integrity sha512-vLCJy4n/55ShcrgZQwkr/KMiMPcZZ8M4DypXz6aw6bjzLv7zuyYv7lF68rTr4z4GhExC7WpUwTfyQ03BJffmfA==
+"@assemblyscript/loader@^0.19.3":
+  version "0.19.3"
+  resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.19.3.tgz#54fff5664f67c899237b30c428be23650658f54e"
+  integrity sha512-wGWFkDYbpSorD6f5slNWBwd4nkkdV9QcT3up4W4T3uSimN0xUJs4UFevXmsQNhpHIxI4h8AJn9lHJ04pm7dzyA==
 
 "@rollup/plugin-node-resolve@^13.0.0":
   version "13.0.0"
@@ -61,10 +61,10 @@
   dependencies:
     "@types/node" "*"
 
-assemblyscript@^0.19.2:
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.19.2.tgz#952e185d170d5da3ee3a5314734f6244c3619488"
-  integrity sha512-0ETRv6oSOhqgPmf23KrD+111QL685IxY/k3UHlC7NzGK2VAi+3Em1U2E06zCPnb45tjUD86wBANlDJDGEZisBg==
+assemblyscript@^0.19.3:
+  version "0.19.3"
+  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.19.3.tgz#4600db7a7f46bb0f6bb8a1342791264033605282"
+  integrity sha512-IfRqQ7nYDY/UzbGnRrFwKnClR1ITha6nhHGqr/3Jzwof9BdgfqANhpqTmRcKJ5o02WAmghkjQwfJqzDfnDd1VA==
   dependencies:
     binaryen "101.0.0-nightly.20210604"
     long "^4.0.0"
@@ -117,7 +117,7 @@ fs.realpath@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
 
-fsevents@~2.3.1:
+fsevents@~2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
@@ -227,27 +227,27 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rollup@^2.51.1:
-  version "2.51.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.51.1.tgz#87bcd4095fe79b14c9bec0edc7ffa44e4827f793"
-  integrity sha512-8xfDbAtBleXotb6qKEHWuo/jkn94a9dVqGc7Rwl3sqspCVlnCfbRek7ldhCARSi7h32H0xR4QThm1t9zHN+3uw==
+rollup@^2.52.1:
+  version "2.52.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.52.1.tgz#dd1cc178d70cf35c48d943fc06fdc32d546e6876"
+  integrity sha512-/SPqz8UGnp4P1hq6wc9gdTqA2bXQXGx13TtoL03GBm6qGRI6Hm3p4Io7GeiHNLl0BsQAne1JNYY+q/apcY933w==
   optionalDependencies:
-    fsevents "~2.3.1"
+    fsevents "~2.3.2"
 
 sourcemap-codec@^1.4.4:
   version "1.4.8"
   resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
   integrity sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==
 
-tslib@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
-  integrity sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==
+tslib@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+  integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
 
-typescript@^4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.2.tgz#399ab18aac45802d6f2498de5054fcbbe716a805"
-  integrity sha512-zZ4hShnmnoVnAHpVHWpTcxdv7dWP60S2FsydQLV8V5PbS3FifjWFFRiHSWpDJahly88PRyV5teTSLoq4eG7mKw==
+typescript@^4.3.3:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.3.tgz#5401db69bd3203daf1851a1a74d199cb3112c11a"
+  integrity sha512-rUvLW0WtF7PF2b9yenwWUi9Da9euvDRhmH7BLyBG4DCFfOJ850LGNknmRpp8Z8kXNUPObdZQEfKOiHtXuQHHKA==
 
 wrappy@1:
   version "1.0.2"
