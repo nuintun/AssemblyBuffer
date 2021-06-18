@@ -3,6 +3,8 @@
  */
 
 // 基础类型空间占用
+// @ts-ignore
+@inline
 export const enum SizeOf {
   INT8 = 1,
   UINT8 = 1,

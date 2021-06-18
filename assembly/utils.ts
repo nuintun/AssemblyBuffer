@@ -9,6 +9,8 @@
  * @param {string} encoding 字符串编码
  * @returns {ArrayBuffer}
  */
+// @ts-ignore
+@inline
 export function stringEncode(value: string, encoding: string): ArrayBuffer {
   const formatted = encoding.toUpperCase();
 
@@ -30,6 +32,8 @@ export function stringEncode(value: string, encoding: string): ArrayBuffer {
  * @param {string} encoding 字符串编码
  * @returns {string}
  */
+// @ts-ignore
+@inline
 export function stringDecode(buffer: ArrayBuffer, encoding: string): string {
   const formatted = encoding.toUpperCase();
 
@@ -51,6 +55,8 @@ export function stringDecode(buffer: ArrayBuffer, encoding: string): string {
  * @param {u16} pageSize 缓冲区页大小
  * @returns {i32}
  */
+// @ts-ignore
+@inline
 export function calcBufferLength(length: i32, pageSize: u16): i32 {
   if (length > <i32>pageSize) {
     const pages: i32 = <i32>Math.ceil(length / pageSize);
