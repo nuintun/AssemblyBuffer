@@ -6,8 +6,6 @@
  * @type {string[]}
  * @description 已获得的二进制映射表
  */
-// @ts-ignore
-@inline
 export const mapping: string[] = [];
 
 // 生成映射表

@@ -1,14 +1,19 @@
 {
+  "entries": [
+    "./assembly/index.ts"
+  ],
+  "options": {
+    "measure": true,
+    "runtime": "stub",
+    "sourceMap": true
+  },
   "targets": {
     "release": {
-      "optimize": true,
-      "shrinkLevel": 2,
-      "converge": false,
-      "noAssert": false,
+      "noAssert": true,
+      "shrinkLevel": 0,
+      "bindings": "raw",
       "optimizeLevel": 3,
-      "exportRuntime": true,
-      "tsdFile": "wasm/Buffer.d.ts",
-      "binaryFile": "wasm/Buffer.wasm"
+      "outFile": "wasm/Buffer.wasm"
     }
   }
 }
