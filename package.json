@@ -2,6 +2,7 @@
   "name": "@nuintun/assembly-buffer",
   "version": "0.0.1",
   "description": "A buffer tool using WebAssembly.",
+  "type": "module",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "typings": "typings/index.d.ts",

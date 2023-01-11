@@ -2,7 +2,7 @@
  * @module clean
  */
 
-const rimraf = require('rimraf');
+import rimraf from 'rimraf';
 
 function clean(paths) {
   if (Array.isArray(paths)) {

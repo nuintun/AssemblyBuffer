@@ -3,8 +3,8 @@
  */
 
 import pkg from '../package.json';
-import wasm from './plugins/wasm';
-import treeShake from './plugins/tree-shake';
+import wasm from './plugins/wasm.js';
+import treeShake from './plugins/tree-shake.js';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 
@@ -24,7 +24,7 @@ export default {
     banner,
     format: 'umd',
     name: 'Buffer',
-    interop: false,
+    interop: 'auto',
     esModule: false,
     amd: { id: 'buffer' },
     file: 'examples/index.js'
