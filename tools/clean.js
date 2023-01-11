@@ -5,9 +5,13 @@
 const rimraf = require('rimraf');
 
 function clean(paths) {
-  paths = Array.isArray(paths) ? paths : [paths];
-
-  paths.forEach(path => rimraf.sync(path));
+  if (Array.isArray(paths)) {
+    for (const path of paths) {
+      rimraf.sync(path);
+    }
+  } else {
+    rimraf.sync(path);
+  }
 }
 
 clean(['cjs', 'esm', 'wasm', 'typings', 'tests/index.js', 'examples/index.js']);
