@@ -2,6 +2,7 @@
  * @module rollup.base
  */
 
+import banner from './banner.js';
 import wasm from './plugins/wasm.js';
 import treeShake from './plugins/tree-shake.js';
 import typescript from '@rollup/plugin-typescript';
@@ -10,6 +11,7 @@ export default function rollup(esnext) {
   return {
     input: 'src/index.ts',
     output: {
+      banner,
       interop: 'auto',
       exports: 'auto',
       esModule: false,
