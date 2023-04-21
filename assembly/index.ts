@@ -134,7 +134,7 @@ export class Buffer {
    */
   protected alloc(length: i32): void {
     if (length > 0) {
-      length += this.offset;
+      length += this._offset;
 
       if (length > this._bytes.length) {
         const bytes: Uint8Array = new Uint8Array(utils.calcBufferLength(length, this._pageSize));
@@ -158,7 +158,7 @@ export class Buffer {
    * @param {i32} offset
    */
   protected stepOffset(offset: i32): void {
-    this.offset = this._offset + offset;
+    this._offset += offset;
   }
 
   /**
