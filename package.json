@@ -40,18 +40,18 @@
   },
   "homepage": "https://github.com/nuintun/AssemblyBuffer#readme",
   "dependencies": {
-    "tslib": "^2.5.0"
+    "tslib": "^2.5.2"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.2",
-    "@rollup/plugin-typescript": "^11.1.0",
+    "@rollup/plugin-typescript": "^11.1.1",
     "@rollup/pluginutils": "^5.0.2",
-    "@types/node": "^18.15.12",
-    "assemblyscript": "^0.27.2",
+    "@types/node": "^20.2.3",
+    "assemblyscript": "^0.27.5",
     "magic-string": "^0.30.0",
-    "prettier": "^2.8.7",
-    "rimraf": "^5.0.0",
-    "rollup": "^3.20.6",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
+    "rollup": "^3.23.0",
     "typescript": "^5.0.4"
   }
 }
